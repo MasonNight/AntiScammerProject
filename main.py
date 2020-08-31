@@ -7,13 +7,13 @@ import json
 chars = string.ascii_letters + string.digits + '!@#$%^&*()'
 random.seed = (os.urandom(1024))
 
-print('I started')
+print('Program Started.')
 url = 'https://www.sunwesttrust.com/login.microsoftonline.com/SAMLRequest.php'
 
 firstNames = json.loads(open('nameList.json').read())
 lastNames = json.loads(open('lastNameList.json').read())
 
-#for name in firstNames:
+
 while 1:
     username = random.choice(firstNames).lower() + '.' + random.choice(lastNames).lower() +'@siu.edu'
     password = ''.join(random.choice(chars) for i in range(15))
